@@ -2,11 +2,24 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-	<bean id="triangle" class="org.learnspring.tutorial2.Triangle">
-		<!-- <constructor-arg type="java.lang.String" value="Equilateral"/>
-		<constructor-arg type="int" value="20"/>  -->
-		
-		<constructor-arg index="0" value="Equilateral"/>
-		<constructor-arg index="1" value="20"/>
+	<bean id="triangle" class="org.learnspring.tutorial3.Triangle">
+		<property name="pointA" ref="zeropoint"></property>
+		<property name="pointB" ref="point2"></property>
+		<property name="pointC" ref="point3"></property>
+	</bean>
+	
+	<bean id="zeropoint" class="org.learnspring.tutorial3.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="point2" class="org.learnspring.tutorial3.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="-20"></property>
+	</bean>
+	
+	<bean id="point3" class="org.learnspring.tutorial3.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
 	</bean>
 </beans>
