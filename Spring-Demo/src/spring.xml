@@ -2,8 +2,11 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-	<bean id="triangle" class="org.learnspring.tutorial1.Triangle">
-		<property name="type" value="Equilateral"/>
-		<property name="height" value="20"/>
+	<bean id="triangle" class="org.learnspring.tutorial2.Triangle">
+		<!-- <constructor-arg type="java.lang.String" value="Equilateral"/>
+		<constructor-arg type="int" value="20"/>  -->
+		
+		<constructor-arg index="0" value="Equilateral"/>
+		<constructor-arg index="1" value="20"/>
 	</bean>
 </beans>
